@@ -29,7 +29,8 @@
 		<!--配置Hibernate的属性 -->
 		<property name="hibernateProperties">
 			<value>
-				hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+				<!-- hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect -->
+				hibernate.dialect=org.hibernate.dialect.MySQLDialect
 				hibernate.show_sql=true
 				hibernate.hbm2ddl.auto=update
 			</value>
@@ -38,10 +39,16 @@
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="org.postgresql.Driver" />
-		<property name="url" value="jdbc:postgresql://localhost:5432/nest" />
-		<property name="username" value="postgres" />
-		<property name="password" value="111111" />
+		<!-- 
+			<property name="driverClassName" value="org.postgresql.Driver" />
+			<property name="url" value="jdbc:postgresql://localhost:5432/nest" />
+			<property name="username" value="postgres" />
+			<property name="password" value="111111" /> 
+		-->
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+			<property name="url" value="jdbc:mysql://localhost:3306/nest" />
+			<property name="username" value="root" />
+			<property name="password" value="111111" /> 
 	</bean>
 
 	<bean id="hibernateTransactionManager"

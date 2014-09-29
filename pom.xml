@@ -128,11 +128,11 @@
 		<!-- spring -->
 		
 		<!-- MySql -->
-        <!-- <dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.0.4</version>
-        </dependency> -->
+        </dependency>
         <dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
