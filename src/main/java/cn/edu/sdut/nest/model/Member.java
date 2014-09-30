@@ -1,5 +1,6 @@
 package cn.edu.sdut.nest.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,6 +14,7 @@ public class Member {
     private String lastName;
     private String firstName;
 
+   // @Column(length=2)
     public String getFirstName() {
         return firstName;
     }
