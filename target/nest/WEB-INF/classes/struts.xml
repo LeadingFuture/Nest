@@ -9,8 +9,13 @@
 	
 	<package name="nest" extends="struts-default">
 
-        <action name="*">
+        <action name="">
             <result>index.jsp</result>
         </action>
+        
+        <action name="members" class="cn.edu.sdut.nest.action.MemberAction" method="execute">
+        	<result>MemberList.jsp</result>
+        </action>
     </package>
+    
 </struts>
