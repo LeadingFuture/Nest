@@ -7,6 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import org.apache.commons.logging.Log;
 import org.apache.log4j.Logger;
+import org.hibernate.FlushMode;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,15 +26,18 @@ public class MemberServiceImpl extends HibernateDaoSupport implements MemberServ
 	}
 
 	public void save(Member member) {
-
+//		getHibernateTemplate().getSessionFactory().getCurrentSession().setFlushMode(FlushMode.AUTO);
+		getHibernateTemplate().merge(member);
+		getHibernateTemplate().flush();
 	}
 
 	public void remove(int id) {
-
+		getHibernateTemplate().delete(find(id));
+		getHibernateTemplate().flush();
 	}
 
 	public Member find(int id) {
-		return null;
+		return getHibernateTemplate().get(Member.class,id);
 	}
 
 }

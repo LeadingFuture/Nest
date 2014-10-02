@@ -14,10 +14,25 @@ public class MemberAction {
 	
 	private MemberService memberService;
 	private List<Member> members;
+	private Member member;
+	private Integer memberId;
+	
 	private String message="用户列表";
 	
 	public String execute(){
 		members=memberService.findAll();
+		if(memberId!=null){
+			member=memberService.find(memberId);
+		}
+		return Action.SUCCESS;
+	}
+	public String save(){
+		memberService.save(member);
+		execute();
+		return Action.SUCCESS;
+	}
+	public String remove(){
+		memberService.remove(memberId);
 		return Action.SUCCESS;
 	}
 
@@ -43,6 +58,18 @@ public class MemberAction {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+	public Member getMember() {
+		return member;
+	}
+	public void setMember(Member member) {
+		this.member = member;
+	}
+	public Integer getMemberId() {
+		return memberId;
+	}
+	public void setMemberId(Integer memberId) {
+		this.memberId = memberId;
 	}
 	
 

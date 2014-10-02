@@ -16,6 +16,12 @@
         <action name="members" class="cn.edu.sdut.nest.action.MemberAction" method="execute">
         	<result>MemberList.jsp</result>
         </action>
+        
+        <action name="save" class="cn.edu.sdut.nest.action.MemberAction" method="save">
+        	<result type="redirectAction">
+				<param name="actionName">members</param>
+			</result>
+        </action>
     </package>
     
 </struts>
