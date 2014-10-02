@@ -22,6 +22,11 @@
 				<param name="actionName">members</param>
 			</result>
         </action>
+        <action name="delete" class="cn.edu.sdut.nest.action.MemberAction" method="remove">
+        	<result type="redirectAction">
+				<param name="actionName">members</param>
+			</result>
+        </action>
     </package>
     
 </struts>

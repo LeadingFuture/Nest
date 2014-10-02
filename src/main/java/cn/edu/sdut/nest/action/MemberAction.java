@@ -33,6 +33,7 @@ public class MemberAction {
 	}
 	public String remove(){
 		memberService.remove(memberId);
+		execute();
 		return Action.SUCCESS;
 	}
 

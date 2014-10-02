@@ -79,6 +79,8 @@ public final class MemberList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<head>\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("<title>用户列表</title>\n");
+      out.write("<link rel=\"stylesheet\" href=\"http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css\">\n");
+      out.write("<link rel=\"stylesheet\" href=\"css/resetbootstrap.css\">\n");
       out.write("</head>\n");
       out.write("<body>\n");
       out.write("\t");
@@ -95,6 +97,8 @@ public final class MemberList_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_s_form_0(_jspx_page_context))
         return;
       out.write("\n");
+      out.write("<script src=\"http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js\"></script>\n");
+      out.write("<script src=\"http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js\"></script>\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -157,7 +161,11 @@ public final class MemberList_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("\t\t<a href=\"members?memberId=");
         if (_jspx_meth_s_property_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_iterator_0, _jspx_page_context))
           return true;
-        out.write("\" >编辑</a>\n");
+        out.write("\" >编辑</a>&nbsp;\n");
+        out.write("\t\t<a href=\"delete?memberId=");
+        if (_jspx_meth_s_property_3((javax.servlet.jsp.tagext.JspTag) _jspx_th_s_iterator_0, _jspx_page_context))
+          return true;
+        out.write("\" >删除</a>\n");
         out.write("\t\t<br />\n");
         out.write("\t");
         int evalDoAfterBody = _jspx_th_s_iterator_0.doAfterBody();
@@ -208,6 +216,24 @@ public final class MemberList_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _jspx_tagPool_s_property_value_nobody.reuse(_jspx_th_s_property_2);
+    return false;
+  }
+
+  private boolean _jspx_meth_s_property_3(javax.servlet.jsp.tagext.JspTag _jspx_th_s_iterator_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:property
+    org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_property_3 = (org.apache.struts2.views.jsp.PropertyTag) _jspx_tagPool_s_property_value_nobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
+    _jspx_th_s_property_3.setPageContext(_jspx_page_context);
+    _jspx_th_s_property_3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_iterator_0);
+    _jspx_th_s_property_3.setValue("id");
+    int _jspx_eval_s_property_3 = _jspx_th_s_property_3.doStartTag();
+    if (_jspx_th_s_property_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_s_property_value_nobody.reuse(_jspx_th_s_property_3);
+      return true;
+    }
+    _jspx_tagPool_s_property_value_nobody.reuse(_jspx_th_s_property_3);
     return false;
   }
 

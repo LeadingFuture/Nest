@@ -6,6 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>用户列表</title>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/resetbootstrap.css">
 </head>
 <body>
 	<s:property value="message" />
@@ -14,7 +16,8 @@
 	
 		${m.firstName}
 		<s:property value="lastName" />
-		<a href="members?memberId=<s:property value="id"/>" >编辑</a>
+		<a href="members?memberId=<s:property value="id"/>" >编辑</a>&nbsp;
+		<a href="delete?memberId=<s:property value="id"/>" >删除</a>
 		<br />
 	</s:iterator>
 	<br />
@@ -24,5 +27,7 @@
 		<s:textfield id="lastName" label="Last Name" name="member.lastName" />
 		<s:submit/>
 	</s:form>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>

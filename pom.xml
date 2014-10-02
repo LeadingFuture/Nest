@@ -133,11 +133,15 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.0.4</version>
 		</dependency>
+		<!-- MySql -->
+		
+		<!-- postgresql -->
 		<dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.1-901.jdbc3</version>
 		</dependency>
+		<!-- postgresql -->
 
 		<!-- log4j -->
 		<dependency>
