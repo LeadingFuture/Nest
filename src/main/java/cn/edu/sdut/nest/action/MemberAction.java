@@ -28,12 +28,10 @@ public class MemberAction {
 	}
 	public String save(){
 		memberService.save(member);
-		execute();
 		return Action.SUCCESS;
 	}
 	public String remove(){
 		memberService.remove(memberId);
-		execute();
 		return Action.SUCCESS;
 	}
 

@@ -31,8 +31,8 @@
             org.springframework.web.util.Log4jConfigListener  
         </listener-class>  
     </listener>  
-<!-- end -->  
-  
+<!-- end --> 
+
     <listener>  
         <listener-class>  
             org.springframework.web.context.ContextLoaderListener  

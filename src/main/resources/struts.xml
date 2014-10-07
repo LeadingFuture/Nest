@@ -10,6 +10,11 @@
 	<package name="nest" extends="struts-default">
 
         <action name="">
+            <result type="redirectAction">
+				<param name="actionName">passedDays</param>
+			</result>
+        </action>
+        <action name="passedDays" class="cn.edu.sdut.nest.action.NormalAction" method="passedDays">
             <result>index.jsp</result>
         </action>
         

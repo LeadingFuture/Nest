@@ -11,3 +11,6 @@
 	vertical-align: baseline;
 	border-radius: .25em;
 }
+td, th {
+padding: 4px;
+}

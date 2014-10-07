@@ -2,12 +2,7 @@ package cn.edu.sdut.nest.service;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
-import org.apache.commons.logging.Log;
 import org.apache.log4j.Logger;
-import org.hibernate.FlushMode;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import org.springframework.transaction.annotation.Transactional;
 
