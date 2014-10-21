@@ -7,12 +7,8 @@
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
 <body>
-	<div id="index_content">
-		<div class="index_passeddays">
-			已过天数:
-			<s:property value="passedDays" />
-			天
-		</div>
+	<div id="">
+		
 	</div>
 </body>
 </html>

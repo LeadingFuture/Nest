@@ -8,7 +8,7 @@
 <title>用户列表</title>
 <link rel="stylesheet"
 	href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/resetbootstrap.css">
+<link rel="stylesheet" href="../css/resetbootstrap.css">
 </head>
 <body>
 	<s:property value="message" />

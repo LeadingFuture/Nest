@@ -1,5 +1,7 @@
 package cn.edu.sdut.nest.action;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -16,8 +18,14 @@ public class MemberAction {
 	private List<Member> members;
 	private Member member;
 	private Integer memberId;
+	private String passedDays;
 	
 	private String message="用户列表";
+	
+	public String passedDays(){
+		passedDays=memberService.find(1).getPassedDays();
+		return Action.SUCCESS;
+	}
 	
 	public String execute(){
 		members=memberService.findAll();
@@ -69,6 +77,14 @@ public class MemberAction {
 	}
 	public void setMemberId(Integer memberId) {
 		this.memberId = memberId;
+	}
+
+	public String getPassedDays() {
+		return passedDays;
+	}
+
+	public void setPassedDays(String passedDays) {
+		this.passedDays = passedDays;
 	}
 	
 

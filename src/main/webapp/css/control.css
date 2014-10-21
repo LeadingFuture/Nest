@@ -1,0 +1,16 @@
+#index_content {
+	width:100%;
+	height:100%;
+    font-family: 'Times New Roman';
+    background-image: url('../img/l.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.index_passeddays{
+	width:20%;
+	margin-top:30%;
+	margin-right:5%;
+	float:right;
+}

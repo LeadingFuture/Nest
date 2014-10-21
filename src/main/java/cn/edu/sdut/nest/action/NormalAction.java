@@ -14,12 +14,12 @@ public class NormalAction {
 	private long passedDays;
 	
 	public String passedDays(){
-		Calendar c=Calendar.getInstance();
-		c.setTime(startDate);
-		c.add(Calendar.DAY_OF_YEAR, -100);
-		startDate=c.getTime();
-		passedDays = (new Date().getTime()-startDate.getTime()) / (1000 * 60 * 60 * 24);
-		log.info("已过天数: "+passedDays);
+//		Calendar c=Calendar.getInstance();
+//		c.setTime(startDate);
+//		c.add(Calendar.DAY_OF_YEAR, -100);
+//		startDate=c.getTime();
+//		passedDays = (new Date().getTime()-startDate.getTime()) / (1000 * 60 * 60 * 24);
+//		log.info("已过天数: "+passedDays);
 		return Action.SUCCESS;
 	}
 
