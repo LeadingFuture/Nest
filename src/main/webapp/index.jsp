@@ -12,6 +12,9 @@
 			已过天数:
 			<s:property value="passedDays" />
 			天
+			<div>
+				<a href="member/members">测试</a>
+			</div>
 		</div>
 	</div>
 </body>
